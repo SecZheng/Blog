@@ -1,0 +1,15 @@
+server:
+  port: 9090
+
+spring:
+  cloud:
+    sentinel:
+      eager: true
+      transport:
+        dashboard: 127.0.0.1:8080
+        client-ip: 127.0.0.1
+      datasource:
+        ds1:
+          nacos:
+            data-id: sentinel
+            rule-type: flow

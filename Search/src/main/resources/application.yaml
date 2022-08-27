@@ -1,0 +1,14 @@
+server:
+  port: 7070
+spring:
+  cloud:
+    sentinel:
+      eager: true
+      transport:
+        dashboard: 127.0.0.1:8080 #localhost无效，需要是ip
+        client-ip: 127.0.0.1
+      datasource:
+        ds1:
+          nacos:
+            data-id: sentinel
+            rule-type: flow

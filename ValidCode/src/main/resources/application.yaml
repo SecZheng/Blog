@@ -1,0 +1,24 @@
+ipaddr: 192.168.220.128
+spring:
+  application:
+    name: Code
+  mail:
+    host: smtp.qq.com
+    username:
+    password:
+    port: 587
+    properties:
+      mail:
+        smtp:
+          timeout: 3000
+          connectiontimeout: 3000
+          writetimeout: 4000
+  redis:
+    host: ${ipaddr}
+  rabbitmq:
+    host: ${ipaddr}
+server:
+  port: 8006
+feign:
+  circuitbreaker:
+    enabled: true

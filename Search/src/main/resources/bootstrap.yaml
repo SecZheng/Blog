@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: Search
+  cloud:
+    nacos:
+      config:
+        extension-configs:
+          - data-id: common.yaml
+            refresh: true
+            group: DEFAULT_GROUP
+
